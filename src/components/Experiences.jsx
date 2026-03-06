@@ -35,13 +35,13 @@ const experiences = [
 
 export const Experience = () => {
   return (
-    <section id="experience" className="py-24 px-4 bg-secondary/30">
+    <section id="experiences" className="py-24 px-4 bg-secondary/30">
       <div className="container mx-auto max-w-6xl">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
           My <span className="text-primary">Experience</span>
         </h2>
 
-        <div className="grid md:grid-cols-2 gap-10">
+        <div className="grid md:grid-cols-3 gap-10">
           {experiences.map((item, index) => (
             <motion.div
               key={index}
@@ -53,11 +53,11 @@ export const Experience = () => {
               className="bg-card p-8 rounded-2xl shadow-lg hover:shadow-primary/20 transition"
             >
               
-              <div className="w-30 h-30 mb-6 rounded-xl bg-secondary flex items-center justify-center overflow-hidden">
+              <div className="w-40 h-40 mb-3 mx-auto rounded-xl bg-secondary flex items-center justify-center overflow-hidden">
                 <img
                   src={item.logo}
                   alt={item.company}
-                  className="object-contain w-30 h-30"
+                  className="object-contain w-40 h-40"
                 />
               </div>
 

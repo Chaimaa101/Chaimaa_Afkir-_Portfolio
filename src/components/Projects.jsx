@@ -12,59 +12,50 @@ import "swiper/css/navigation";
 const projects = [
   {
     id: 1,
-    title: "SaaS Landing Page",
-    description: "A beautiful landing page app using React and Tailwind.",
-    image: "/projects/project1.png",
-    tags: ["React", "TailwindCSS", "Supabase"],
+    title: "EasyRent ",
+    description: "Complete Car Rental Platform with Real-time Management & Payment Processing",
+    image: "/placeholder.png",
+    tags: ["React",  "Laravel","Stripe"],
     demoUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/Chaimaa101/Projet-Fil-Rouge-EasyRent.git",
   },
   {
     id: 2,
-    title: "Orbit Analytics Dashboard",
+    title: "OPTISTORE",
     description:
-      "Interactive analytics dashboard with data visualization and filtering capabilities.",
-    image: "/projects/project2.png",
-    tags: ["TypeScript", "D3.js", "Next.js"],
+      "Sleek and modern eCommerce platform designed for selling high-quality eyewear.",
+    image: "/placeholder.png",
+    tags: ["Laravel", "ReactJs", "InertiaJs"],
     demoUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/Chaimaa101/OPTISTORE.git",
   },
   {
     id: 3,
-    title: "E-commerce Platform",
+    title: "Podcast-Finder ",
     description:
-      "Full-featured e-commerce platform with user authentication and payment processing.",
-    image: "/projects/project3.png",
-    tags: ["React", "Node.js", "Stripe"],
+      "Platform that allowing users to search, listen and discover podcasts according to their interests.",
+    image: "/placeholder.png",
+    tags: ["Laravel", "API", "Axios"],
     demoUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/Chaimaa101/Podcast_Finder.git",
   }, {
-    id: 3,
-    title: "E-commerce Platform",
+    id: 4,
+    title: "Timyo",
     description:
-      "Full-featured e-commerce platform with user authentication and payment processing.",
-    image: "/projects/project3.png",
-    tags: ["React", "Node.js", "Stripe"],
+      "Book appointments, and for administrators to manage all appointments.",
+    image: "/placeholder.png",
+    tags: ["React.js", "Laravel", "SPA Auth"],
     demoUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/Chaimaa101/Timyo.git",
   }, {
-    id: 3,
-    title: "E-commerce Platform",
+    id: 5,
+    title: "Invoicify ",
     description:
-      "Full-featured e-commerce platform with user authentication and payment processing.",
-    image: "/projects/project3.png",
-    tags: ["React", "Node.js", "Stripe"],
+      "Intuitive invoice management system that helps users easily manage their invoices.",
+    image: "/placeholder.png",
+    tags: ["Laravel", "React.js", "InertiaJs"],
     demoUrl: "#",
-    githubUrl: "#",
-  }, {
-    id: 3,
-    title: "E-commerce Platform",
-    description:
-      "Full-featured e-commerce platform with user authentication and payment processing.",
-    image: "/projects/project3.png",
-    tags: ["React", "Node.js", "Stripe"],
-    demoUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/Chaimaa101/Invoicify.git",
   },
 ];
 
@@ -81,7 +72,6 @@ export const Projects = () => {
           with attention to detail, performance, and user experience.
         </p>
 
-        {/* Swiper */}
         <Swiper
           modules={[Pagination, Navigation]}
           spaceBetween={30}
@@ -92,7 +82,7 @@ export const Projects = () => {
             768: { slidesPerView: 2 },
             1024: { slidesPerView: 3 },
           }}
-          className="pb-14"
+          className="pb-14 "
         >
           {projects.map((project, index) => (
             <SwiperSlide key={project.id}>
@@ -161,7 +151,6 @@ export const Projects = () => {
           ))}
         </Swiper>
 
-        {/* GitHub Button */}
         <div className="text-center mt-12">
           <motion.a
             className="cosmic-button w-fit flex items-center mx-auto gap-2"

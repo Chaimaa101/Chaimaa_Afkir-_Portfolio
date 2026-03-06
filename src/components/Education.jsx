@@ -2,20 +2,20 @@ import { motion } from "framer-motion";
 
 const education = [
   {
-    degree: "Business Intelligence Systems",
+    degree: "Full-Stack Web Development Bootcamp",
     school: "Simplon maghreb",
     period: "July 2025 –January 2026",
     logo: "/simplon.png",
   },
   {
-    degree: "Bachelor in Business Intelligence Systems",
+    degree: "Bachelor’s Degree – Business Intelligence Systems",
     school: "Faculty of Sciences Ain Choc",
     period: "October 2023 – July 2024",
     logo: "/fsac.png",
   },
   {
-    degree: "BTS in IT Systems Development",
-    school: "Institution Name",
+    degree: "BTS – Information Systems Development",
+    school: "Centre Lycée Al Kendi",
     period: "August 2021 – July 2023",
     logo: "/alkendi.png",
   },
@@ -40,12 +40,12 @@ export const Education = () => {
               whileHover={{ scale: 1.03 }}
               className="bg-card p-8 rounded-2xl shadow-lg hover:shadow-primary/20 transition text-center"
             >
-              {/* Logo */}
+  
               <div className="w-40 h-40 mx-auto mb-6 rounded-xl bg-secondary flex items-center justify-center overflow-hidden">
                 <img
                   src={item.logo}
                   alt={item.school}
-                  className="object-contain w-30 h-30"
+                  className="object-contain w-40 h-40"
                 />
               </div>
 

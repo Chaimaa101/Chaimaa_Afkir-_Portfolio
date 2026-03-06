@@ -2,22 +2,42 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { cn } from "../LIB/utils";
 
+import {
+  SiHtml5,
+  SiCss3,
+  SiJavascript,
+  SiReact,
+  SiTailwindcss,
+  SiBootstrap,
+  SiPhp,
+  SiLaravel,
+  SiMysql,
+  SiDocker,
+  SiGit,
+  SiGithub,
+  SiPostman,
+  SiFigma,
+  SiJira,
+} from "react-icons/si";
+
 const skills = [
-  { name: "HTML/CSS", level: 95, category: "frontend" },
-  { name: "JavaScript", level: 90, category: "frontend" },
-  { name: "React", level: 90, category: "frontend" },
-  { name: "TypeScript", level: 85, category: "frontend" },
-  { name: "Tailwind CSS", level: 90, category: "frontend" },
-  { name: "Next.js", level: 80, category: "frontend" },
-  { name: "Node.js", level: 80, category: "backend" },
-  { name: "Express", level: 75, category: "backend" },
-  { name: "MongoDB", level: 70, category: "backend" },
-  { name: "PostgreSQL", level: 65, category: "backend" },
-  { name: "GraphQL", level: 60, category: "backend" },
-  { name: "Git/GitHub", level: 90, category: "tools" },
-  { name: "Docker", level: 70, category: "tools" },
-  { name: "Figma", level: 85, category: "tools" },
-  { name: "VS Code", level: 95, category: "tools" },
+  { name: "HTML", icon: <SiHtml5 />, category: "frontend" },
+  { name: "CSS", icon: <SiCss3 />, category: "frontend" },
+  { name: "JavaScript", icon: <SiJavascript />, category: "frontend" },
+  { name: "React", icon: <SiReact />, category: "frontend" },
+  { name: "Tailwind CSS", icon: <SiTailwindcss />, category: "frontend" },
+  { name: "Bootstrap", icon: <SiBootstrap />, category: "frontend" },
+
+  { name: "PHP", icon: <SiPhp />, category: "backend" },
+  { name: "Laravel", icon: <SiLaravel />, category: "backend" },
+  { name: "MySQL", icon: <SiMysql />, category: "backend" },
+
+  { name: "Git", icon: <SiGit />, category: "tools" },
+  { name: "GitHub", icon: <SiGithub />, category: "tools" },
+  { name: "Docker", icon: <SiDocker />, category: "tools" },
+  { name: "Postman", icon: <SiPostman />, category: "tools" },
+  { name: "Figma", icon: <SiFigma />, category: "tools" },
+  { name: "Jira", icon: <SiJira />, category: "tools" },
 ];
 
 const categories = ["all", "frontend", "backend", "tools"];
@@ -32,8 +52,9 @@ export const Skills = () => {
   return (
     <section id="skills" className="py-24 px-4 relative bg-secondary/30">
       <div className="container mx-auto max-w-5xl">
+        
         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
-          My <span className="text-primary"> Skills</span>
+          My <span className="text-primary">Skills</span>
         </h2>
 
         {/* Category Buttons */}
@@ -53,36 +74,34 @@ export const Skills = () => {
             </button>
           ))}
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        {/* Skills Grid */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
           {filteredSkills.map((skill, index) => (
             <motion.div
               key={skill.name}
-              className="bg-card p-6 rounded-lg shadow-xs card-hover"
+              className="bg-card p-6 rounded-xl shadow-md flex flex-col items-center justify-center gap-3 hover:shadow-primary/20 transition"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.1, duration: 0.6 }}
+              transition={{ delay: index * 0.1 }}
+              whileHover={{ scale: 1.05 }}
             >
-              <div className="text-left mb-4">
-                <h3 className="font-semibold text-lg">{skill.name}</h3>
-              </div>
-              <div className="w-full bg-secondary/50 h-2 rounded-full overflow-hidden">
-                <motion.div
-                  className="bg-primary h-2 rounded-full origin-left"
-                  initial={{ width: 0 }}
-                  whileInView={{ width: `${skill.level}%` }}
-                  transition={{ duration: 1.5, ease: "easeOut" }}
-                />
+              
+              {/* Icon */}
+              <div className="text-4xl text-primary">
+                {skill.icon}
               </div>
 
-              <div className="text-right mt-1">
-                <span className="text-sm text-muted-foreground">
-                  {skill.level}%
-                </span>
-              </div>
+              {/* Name */}
+              <h3 className="font-semibold text-sm text-center">
+                {skill.name}
+              </h3>
+
             </motion.div>
           ))}
         </div>
+
       </div>
     </section>
   );

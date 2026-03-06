@@ -7,7 +7,9 @@ const navItems = [
   { name: "Home", href: "#hero" },
   { name: "About", href: "#about" },
   { name: "Skills", href: "#skills" },
+  { name: "Experiences", href: "#experiences" },
   { name: "Projects", href: "#projects" },
+  { name: "Education", href: "#education" },
   { name: "Contact", href: "#contact" },
 ];
 
@@ -56,16 +58,14 @@ const Navbar = () => {
           : "py-5 bg-transparent"
       )}
     >
-      <div className="mx-auto grid grid-cols-3 items-center px-4 container">
-        {/* Logo */}
+      <div className="mx-auto grid grid-cols-3 px-4 container">
         <a href="#hero" className="text-xl font-bold tracking-wide">
           <span className="text-foreground">Chaimaa</span>{" "}
           <span className="text-primary">Portfolio</span>
         </a>
 
-        {/* Desktop nav */}
         <motion.div
-          className="hidden md:flex justify-center space-x-8"
+          className="hidden md:flex justify-center space-x-8 ml-32"
           initial="hidden"
           animate="visible"
           transition={{ staggerChildren: 0.12 }}
@@ -78,7 +78,6 @@ const Navbar = () => {
               className="relative text-foreground/80 hover:text-primary transition-colors"
             >
               {item.name}
-              {/* Animated underline */}
               <motion.span
                 className="absolute left-0 -bottom-1 h-[2px] w-full bg-primary"
                 initial={{ scaleX: 0 }}
@@ -113,7 +112,7 @@ const Navbar = () => {
               animate="visible"
               exit="exit"
               transition={{ duration: 0.3 }}
-              className="fixed inset-0 bg-background/90 backdrop-blur-md flex flex-col items-center justify-center space-y-10 text-xl md:hidden"
+              className="fixed inset-0 z-40 bg-background/90 backdrop-blur-xl flex flex-col items-center justify-center space-y-10 text-xl md:hidden"
             >
               {navItems.map((item) => (
                 <motion.a
