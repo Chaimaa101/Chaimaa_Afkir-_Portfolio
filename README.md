@@ -8,7 +8,7 @@
 </h1>
 
 <h3 align="center">
-	Welcome to my **Personal Portfolio** built with **React**, **Tailwind CSS**, and **Framer Motion**. This portfolio showcases my skills, projects, and experience in web development.
+	Welcome to my Personal Portfolio. This portfolio showcases my skills, projects, and experience in web development.
 </h3>
 
 
