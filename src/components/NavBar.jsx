@@ -66,11 +66,11 @@ const Navbar = () => {
   <img
     src="/logo.png"
     alt="logo"
-    className="w-10 h-10 object-contain"
+    className="w-14 h-14 ml-4 object-contain"
   />
-
+{/* 
   <span className="text-foreground">Chaimaa</span>
-  <span className="text-primary">Portfolio</span>
+  <span className="text-primary">Portfolio</span> */}
 </a>
 
         <motion.div

@@ -1,6 +1,6 @@
 import {
-    Facebook,
-    Github,
+  Facebook,
+  Github,
   Instagram,
   Linkedin,
   Mail,
@@ -13,7 +13,6 @@ import { useState } from "react";
 import { cn } from "../LIB/utils";
 
 export const Contact = () => {
-
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = (e) => {
@@ -24,7 +23,6 @@ export const Contact = () => {
     //     title: "Message sent!",
     //     description: "Thank you for your message. I'll get back to you soon.",
     //   });
-     
   };
 
   return (
@@ -50,7 +48,7 @@ export const Contact = () => {
                 <div className="p-3 rounded-full bg-primary/10">
                   <Mail className="h-6 w-6 text-primary" />
                 </div>
-                <div>
+                <div className="text-left">
                   <h4 className="font-medium"> Email</h4>
                   <a
                     href="mailto:afkirchaimaa36@gmail.com"
@@ -63,10 +61,10 @@ export const Contact = () => {
 
               {/* Phone */}
               <div className="flex items-start space-x-4">
-                <div className="p-3 rounded-full bg-primary/10">
+                <div className="p-3  rounded-full bg-primary/10">
                   <Phone className="h-6 w-6 text-primary" />
                 </div>
-                <div>
+                <div className="text-left">
                   <h4 className="font-medium "> Phone</h4>
                   <a
                     href="tel:+212 701887150"
@@ -77,12 +75,11 @@ export const Contact = () => {
                 </div>
               </div>
 
-            
               <div className="flex items-start space-x-4">
                 <div className="p-3 rounded-full bg-primary/10">
                   <MapPin className="h-6 w-6 text-primary" />
                 </div>
-                <div>
+                <div className="text-left">
                   <h4 className="font-medium"> Location</h4>
                   <p className="text-muted-foreground">Casablanca , Morocco</p>
                 </div>
@@ -93,19 +90,39 @@ export const Contact = () => {
             <div className="pt-8">
               <h4 className="font-medium mb-4"> Connect With Me</h4>
               <div className="flex space-x-4 justify-center">
-                <a href="https://www.linkedin.com/in/chaimaa-afkir/" target="_blank" rel="noreferrer">
+                <a
+                  href="https://www.linkedin.com/in/chaimaa-afkir/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <Linkedin />
                 </a>
-                <a href="https://github.com/Chaimaa101" target="_blank" rel="noreferrer">
+                <a
+                  href="https://github.com/Chaimaa101"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <Github />
                 </a>
-                <a href="https://www.instagram.com/shaimaa101e/" target="_blank" rel="noreferrer">
+                <a
+                  href="https://www.instagram.com/shaimaa101e/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <Instagram />
                 </a>
-                <a href="https://x.com/AfkirChaimaa" target="_blank" rel="noreferrer">
+                <a
+                  href="https://x.com/AfkirChaimaa"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <Twitter />
                 </a>
-                 <a href="https://www.facebook.com/chaimaa.di.710" target="_blank" rel="noreferrer">
+                <a
+                  href="https://www.facebook.com/chaimaa.di.710"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <Facebook />
                 </a>
               </div>
@@ -118,7 +135,10 @@ export const Contact = () => {
 
             <form className="space-y-6" onSubmit={handleSubmit}>
               <div>
-                <label htmlFor="name" className="block text-sm font-medium mb-2">
+                <label
+                  htmlFor="name"
+                  className="block text-sm font-medium mb-2 text-left"
+                >
                   Your Name
                 </label>
                 <input
@@ -132,7 +152,10 @@ export const Contact = () => {
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-medium mb-2">
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-medium mb-2 text-left"
+                >
                   Your Email
                 </label>
                 <input
@@ -146,7 +169,10 @@ export const Contact = () => {
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium mb-2">
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-medium mb-2 text-left"
+                >
                   Your Message
                 </label>
                 <textarea
@@ -161,7 +187,9 @@ export const Contact = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className={cn("cosmic-button w-full flex items-center justify-center gap-2")}
+                className={cn(
+                  "cosmic-button w-full flex items-center justify-center gap-2",
+                )}
               >
                 {isSubmitting ? "Sending..." : "Send Message"}
                 <Send size={16} />

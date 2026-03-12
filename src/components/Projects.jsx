@@ -120,7 +120,7 @@ export const Projects = () => {
                     ))}
                   </div>
 
-                  <h3 className="text-xl font-semibold mb-1">
+                  <h3 className="text-xl font-semibold mb-1 text-left">
                     {project.title}
                   </h3>
                   <p className="text-muted-foreground text-sm mb-4">
