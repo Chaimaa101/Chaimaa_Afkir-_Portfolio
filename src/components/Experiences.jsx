@@ -2,6 +2,15 @@ import { motion } from "framer-motion";
 
 const experiences = [
   {
+    title: "Full Stack Development Intern",
+    company: "Elmanager Cloud",
+    period: "September 2026 - Present",
+    logo: "/ElmanagerCloud.png",
+    place: "Casabnca",
+    description:
+      "Developed and integrated application pages, implemented new features, fixed bugs, and contributed to testing and improving the application.",
+  },
+  {
     title: "IT Teacher Intern",
     company: "Private School AL OUMRANE",
     period: "2024",
@@ -27,15 +36,7 @@ const experiences = [
     description:
       "Created and integrated various application pages (home, courses, contact, etc.)",
   },
-  {
-    title: "Full Stack Development Intern",
-    company: "Elmanager Cloud",
-    period: "September 2026 - Present",
-    logo: "/ElmanagerCloud.png",
-    place: "Casabnca",
-    description:
-      "Developed and integrated application pages, implemented new features, fixed bugs, and contributed to testing and improving the application.",
-  },
+  
 ];
 
 export const Experience = () => {

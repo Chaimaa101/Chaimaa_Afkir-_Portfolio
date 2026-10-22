@@ -2,6 +2,12 @@ import { motion } from "framer-motion";
 
 const education = [
   {
+    degree: "Master – Big Data and Cloud Computing",
+    school: "Faculty of Sciences Ain Chock",
+    period: "July 2026 – Present",
+    logo: "/fsac.png",
+  },
+  {
     degree: "Full-Stack Web Development Bootcamp",
     school: "Simplon maghreb",
     period: "July 2025 –January 2026",
@@ -9,7 +15,7 @@ const education = [
   },
   {
     degree: "Bachelor’s Degree – Business Intelligence Systems",
-    school: "Faculty of Sciences Ain Choc",
+    school: "Faculty of Sciences Ain Chock",
     period: "October 2023 – July 2024",
     logo: "/fsac.png",
   },
